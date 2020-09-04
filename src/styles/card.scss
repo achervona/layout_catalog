@@ -6,20 +6,30 @@
 
 .card {
   @include flex-centered;
-  border: 1px solid #f3f3f3;
+  border: 1px solid $border-color;
   border-radius: 5px;
   width: $card-width;
-  padding: 30px 14px 15px;
+  padding: 0 14px 15px;
 
   &:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+    transition: box-shadow 1s;
   }
 }
 
 .card__img {
+  box-sizing: content-box;
   width: 160px;
   height: 134px;
-  margin-bottom: 45px;
+  margin-bottom: 42px;
+  padding-top: 27px;
+  border: 3px solid transparent;
+  transition: transform 1s;
+
+  &:hover {
+    transform: scale(1.2);
+    border: 3px solid $border-color;
+  }
 }
 
 .card__description {
@@ -57,6 +67,7 @@
   background-color: $main-color;
   border: 1px solid $main-color;
   border-radius: 5px;
+  transition: background-color 1s;
 
   &:hover {
     background-color: white;
@@ -70,6 +81,7 @@
   font-weight: 700;
   color: white;
   padding: 12px 58px;
+  transition: color 1s;
 
   &:hover {
     color: $main-color;
