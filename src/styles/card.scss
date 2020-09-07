@@ -13,6 +13,7 @@
   }
 
   &__img {
+<<<<<<< HEAD
     box-sizing: content-box;
     width: 160px;
     height: 134px;
@@ -64,6 +65,49 @@
     color: white;
     transition: background-color 1s, color 1s;
 
+=======
+    width: 160px;
+    height: 134px;
+    margin-bottom: 45px;
+  }
+
+  &__description {
+    @include medium-font(15px);
+    margin-bottom: 5px;
+  }
+
+  &__code {
+    margin-bottom: 15px;
+  }
+
+  &__rating {
+    @import "stars";
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px;
+  }
+
+  &__price {
+    @extend .card__rating;
+  }
+
+  &__cost {
+    @include bold-font(16px, 19px);
+  }
+
+  &__button {
+    @include bold-font(14px, 16px);
+    height: 40px;
+    width: 170px;
+    background-color: $main-color;
+    border: 1px solid $main-color;
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: white;
+
+>>>>>>> develop
     &:hover {
       background-color: white;
       color: $main-color;
