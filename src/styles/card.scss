@@ -2,19 +2,28 @@
 
 .card {
   @include flex-centered;
-  border: 1px solid #f3f3f3;
+  border: 1px solid $card-border-color;
   border-radius: 5px;
   width: $card-width;
-  padding: 30px 14px 15px;
+  padding: 15px 14px;
+  transition: box-shadow 1s;
 
   &:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
   }
 
   &__img {
-    width: 160px;
-    height: 134px;
-    margin-bottom: 45px;
+    width: 170px;
+    height: 164px;
+    margin-bottom: 30px;
+    padding: 12px 2px;
+    border: 3px solid transparent;
+    transition: transform 1s;
+
+    &:hover {
+      transform: scale(1.2);
+      border: 3px solid $card-border-color;
+    }
   }
 
   &__description {
@@ -52,6 +61,7 @@
     border-radius: 5px;
     text-transform: uppercase;
     color: white;
+    transition: background-color 1s, color 1s;
 
     &:hover {
       background-color: white;
