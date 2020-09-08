@@ -1,11 +1,14 @@
 @import "general";
 
 .card {
-  @include flex-centered;
-  border: 1px solid #f3f3f3;
-  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   width: $card-width;
   padding: 30px 14px 15px;
+
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
 
   &:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
@@ -18,8 +21,8 @@
   }
 
   &__description {
-    @include medium-font(15px);
     margin-bottom: 5px;
+    @include medium-font(15px);
   }
 
   &__code {
@@ -27,16 +30,19 @@
   }
 
   &__rating {
-    @import "stars";
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    width: 100%;
     margin-bottom: 20px;
   }
 
   &__price {
-    @extend .card__rating;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    margin-bottom: 20px;
   }
 
   &__cost {
@@ -44,18 +50,21 @@
   }
 
   &__button {
-    @include bold-font(14px, 16px);
-    height: 40px;
     width: 170px;
+    height: 40px;
+
+    @include bold-font(14px, 16px);
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+
     background-color: $main-color;
     border: 1px solid $main-color;
     border-radius: 5px;
-    text-transform: uppercase;
-    color: white;
 
     &:hover {
-      background-color: white;
       color: $main-color;
+      background-color: white;
     }
   }
 }

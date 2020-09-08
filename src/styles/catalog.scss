@@ -1,0 +1,21 @@
+@import "general";
+
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(4, $card-width);
+  justify-content: center;
+  row-gap: $card-gap;
+  column-gap: 48px;
+
+  @media (max-width: ($card-width + $card-gap) * 4) {
+    grid-template-columns: repeat(3, $card-width);
+  }
+
+  @media (max-width: ($card-width + $card-gap) * 3) {
+    grid-template-columns: repeat(2, $card-width);
+  }
+
+  @media (max-width: ($card-width + $card-gap) * 2) {
+    grid-template-columns: repeat(1, $card-width);
+  }
+}
