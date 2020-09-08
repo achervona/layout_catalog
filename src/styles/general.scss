@@ -11,24 +11,24 @@ $star-size: 15px;
 
 @mixin flex-centered {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 @mixin thin-font {
   font-size: 11px;
-  line-height: 13px;
   font-weight: 300;
+  line-height: 13px;
 }
 
 @mixin medium-font($height) {
   font-size: 12px;
-  line-height: $height;
   font-weight: 500;
+  line-height: $height;
 }
 
 @mixin bold-font($size, $height) {
   font-size: $size;
-  line-height: $height;
   font-weight: 700;
+  line-height: $height;
 }
