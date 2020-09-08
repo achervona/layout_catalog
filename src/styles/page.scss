@@ -1,0 +1,6 @@
+.page {
+  display: grid;
+  grid-template-rows: 60px auto auto;
+  grid-template-columns: 100%;
+  grid-gap: 50px;
+}
